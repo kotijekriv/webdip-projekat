@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pero Radić">
+    <meta name="title" content="DOKUMENTACIJA">
+    <meta name="keywords" content="automobili, auti, car, autoindustrija, gume, popis">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" type="text/css">
+    <title>DOKUMENTACIJA</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: mistyrose;
+    }
+    .sredina img {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+    }
+</style>
+<body>
+
+    <div class="vrh-stranice">
+        <header>
+            <h1>DOKUMENTACIJA</h1>
+        </header>
+
+        <nav>
+            <h3><a href="http://barka.foi.hr/WebDiP/2019_projekti/WebDiP2019x107/index.php">NATRAG</a></h3>
+        </nav>
+    </div>
+
+    <div class = "sredina">
+
+        <h1>----------</h1>
+        <h2>OPIS PROJEKTNOG ZADATKA I RJEŠENJA</h2>
+        <h3>DJEČJI VRTIĆI</h3>
+        <p>
+            Sustav za upravljanje prijava u programe dječjih vrtića i rangiranje dječjih vrtića prema uspješnosti.<br>
+            Uloge: Neregistrirani korisnik, Registrirani korisnik / Roditelj, Moderator / Voditelj, Administrator<br>
+
+            <h4>Administrator:</h4>
+            ° Kreira dječje vrtiće (npr. Suncokret, Tikvica, …) i dodjeljuje moderatore dječjem vrtiću. Jedan
+            moderator je zadužen za jedan vrtić.<br> Kod unosa mora unijeti naziv i adresu vrtića.<br>
+            ° Vidi ukupan broj djece po vrtiću sa brojem plaćenih i neplaćenih računa.<br>
+            ° Svaki mjesec može unijeti ocjenu za rad dječjeg vrtića u skali od 1 do 10.<br>
+
+            <h4>Moderator / Voditelj:</h4>
+            ° Kreira skupine (npr. pred škola, jaslice, …) u vrtiću uz navođenje cijene na mjesečnoj razini.<br>
+            ° Kreira javni poziv za upise gdje definira broj mjesta i razdoblje (od-do) kada su mogući upisi.
+                Poziv se može mijenjati do datuma početka.<br>
+            ° Vidi popis prijava za upise. Nakon roka za prijave može kliknuti na gumb kojim se automatski
+                prihvaćaju prijave po principu tko prvi njegovo.<br> Ukoliko je bilo više prijava nego definiranih
+                mjesta tada se ostatak označava sa statistom na listi čekanja.<br>
+            ° Evidentira dolazak djeteta u dječji vrtić i svaki mjesec može izdati račun. Finalni iznos za neki
+                mjesec se umanjuje za 10kn po danu kada dijete nije došlo u vrtić.<br>
+            ° Pregledava statistike plaćenih/neplaćenih računa svojeg vrtića za razdoblje (od-do) po<br>
+                skupini.<br>
+
+            <h4>Registrirani korisnik / Roditelj:</h4>
+            ° Može poslati prijavu za upis djeteta u dječji vrtić pri čemu obavezno odabire skupinu.<br>
+            ° Vidi popis prijava za upisom s informacijom da li mu je dijete prihvaćeno ili se nalazi na listi
+                čekanja.<br>
+            ° Nakon što je prijava prihvaćena može odustati od prijave ili dovršiti upis u vrtić unosom
+                osobnih podataka djeteta:<br> ime, prezime, godina, spol i slike uz potvrdu za slobodno
+                korištenje osobnih podataka.<br> Ako odustane od prijave automatski se prvom sljedećem na listi
+                čekanja mijenja status u prihvaćen.<br>
+            ° Vidi popis dolazaka djeteta u dječji vrtić po mjesecima.<br>
+            ° Vidi popis računa i može ga označiti da je plaćen.<br>
+
+            <h4>Neregistrirani korisnik:</h4>
+            ° Vidi popis dječjih vrtića zajedno s prosječnom ocjenom dječjeg vrtića za zadnja tri mjeseca.<br>
+            ° Odabirom vrtića vidi galeriju slika (album) koja uključuje osobne podatke iz prijava u dječji
+                vrtić. Ako nije dana suglasnost od roditelja slika se ne prikazuje.<br>
+            ° Može pretraživati javne pozive za upis uz mogućnost filtriranja po dječjem vrtiću i sortiranja
+                po razdoblju upisa (od ili do).<br>
+        </p><br>
+
+        <h1>----------</h1>
+        <h2>ERA model</h2><br>
+        <img src="multimedija/era.png">
+        <h1>----------</h1>
+        <h2>Navigacijski dijagram - neregistrirani korisnik</h2><br>
+        <img src="multimedija/nav_neregistrirani_korisnik.png">
+        <h1>----------</h1>
+        <h2>Navigacijski dijagram - Roditelj</h2><br>
+        <img src="multimedija/nav_Roditelj.png">
+        <h1>----------</h1>
+        <h2>Navigacijski dijagram - Voditelj</h2><br>
+        <img src="multimedija/nav_Voditelj.png">
+        <h1>----------</h1>
+        <h2>Navigacijski dijagram - Administrator</h2><br>
+        <img src="multimedija/nav_Administrator.png">
+
+        <h1>----------</h1>
+        <h2>POPIS SKRIPATA</h2>
+        <p>
+            dnevnik.class.php<br>
+            dokumentacija.html<br>
+            index.php<br>
+            kontrolna-ploca-admin.php<br>
+            kontrolna-ploca-roditelj.php<br>
+            kontrolna-ploca-voditelj.php<br>
+            obrazac-konfiguracija-sustava-admin.php<br>
+            obrazac-nova-evidencija-voditelj.php<br>
+            obrazac-nova-skupina-voditelj.php<br>
+            obrazac-novi-poziv-voditelj.php<br>
+            obrazac-slanje-prijave.php<br>
+            obrazac-unos-djece.php<br>
+            o_autoru.html<br>
+            podnozje.php<br>
+            popis-djece-roditelj.php<br>
+            popis-djece.php<br>
+            popis-dnevnik-rada-admin.php<br>
+            popis-dolazaka.php<br>
+            popis-evidencija-dolazaka-voditelj.php<br>
+            popis-javni-pozivi-voditelj.php<br>
+            popis-prijava-roditelja.php<br>
+            popis-prijava-voditelj.php<br>
+            popis-racuna.php<br>
+            popis-skupina-voditelj.php<br>
+            postavke.class.php<br>
+            poziv-upisi.php<br>
+            prijava.php<br>
+            registracija.php<br>
+            statistika-racuna-voditelj.php<br>
+            upravljanje-blokadama-admin.php<br>
+            zaboravljenaLozinka.php<br>
+            zaglavlje.php<br>
+            ---<br>
+            AktivacijaKorisnika.php<br>
+            DohvatiBrojRedakaStranicenje.php<br>
+            DohvatiDijete.php<br>
+            DohvatiDjecjeVrtice.php<br>
+            DohvatiDjecuPopisRoditelj.php<br>
+            DohvatiDjecuVrtic.php<br>
+            DohvatiDnevnikRadaAdmin.php<br>
+            DohvatiEvidencijuDjeteta.php<br>
+            DohvatiKorisnike.php<br>
+            DohvatiPoziveVoditelja.php<br>
+            DohvatiPoziveZaUpis.php<br>
+            DohvatiPrijaveRoditeljaZaUpis.php<br>
+            DohvatiPrijaveVoditelja.php<br>
+            DohvatiRacune.php<br>
+            DohvatiRacuneStatistika.php<br>
+            DohvatiSkupineVoditelja.php<br>
+            IzdajRacunVoditelj.php<br>
+            Kolacici.php<br>
+            OdustaniOdPrijave.php<br>
+            OtkljucavanjeBlokiranjeKorisnika.php<br>
+            PlatiRacun.php<br>
+            PopunjavanjeDjeceSelectVoditelj.php<br>
+            PopunjavanjeSkupinaSelect.php<br>
+            PopunjavanjeVrticaSelect.php<br>
+            PrihvatiPrijave.php<br>
+            ProvjeraKorisnickogImena.php<br>
+        </p>
+
+        <h1>----------</h1>
+        <h2>TEHNOLOGIJA I ALATA</h2>
+        <p>
+            <strong>-PhpStorm 2020.1.1-</strong><br>
+            Kreiranje projekta<br>
+            Prijenos datoteka<br>
+            Mijenjanje prava<br>
+            <strong>-phpMyAdmin-</strong><br>
+            Baza podataka<br>
+            <strong>-draw.io-</strong><br>
+            Izrada navigacijskih dijagrama<br>
+            <strong>-MySQL Workbench-</strong><br>
+            Izrada ERA modela<br>
+        </p>
+
+        <h1>----------</h1>
+        <h2>VANJSKI MODULI/BIBLIOTEKE/SKRIPTE</h2>
+        <p>
+            <strong>-FONT-</strong><br>
+            https://fonts.googleapis.com/css?family=Gotu&display=swap<br>
+            <strong>-reCAPTCHA-</strong><br>
+            https://www.google.com/recaptcha/api.js<br>
+            <strong>-OSTALO-</strong><br>
+            https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css<br>
+            https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js<br>
+            //code.jquery.com/jquery-1.12.4.js<br>
+            https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js<br>
+            https://www.google.com/recaptcha/api.js<br>
+            Smarty<br>
+            baza.class.php<br>
+            sesija.class.php<br>
+        </p>
+        <h1>----------</h1>
+    </div>
+
+    <footer>
+        <h4>&copy;MCML 2020</h4>
+    </footer>
+</body>
+</html>
